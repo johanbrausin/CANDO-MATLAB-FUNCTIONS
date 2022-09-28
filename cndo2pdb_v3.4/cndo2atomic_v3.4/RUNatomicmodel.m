@@ -3,7 +3,7 @@ clc
 addpath 'C:\Users\Administrator\Desktop\CANDO-FUNCTIONS\cndo2pdb_v3.4\cndo2atomic_v3.4'; %%%
 addpath 'C:\Users\Administrator\Desktop\CANDO-FUNCTIONS\cndo2pdb_v3.4\topology2pdb_ver3_bulge';
 param.StrandColor = [190 190 190; 86 180, 233];
-%param.StrandColor = [204 121 167; 86 180, 233];   %%OTHERWISAE
+%param.StrandColor = [204 121 167; 86 180, 233];   %%OTHERWISE
 param.L_thres = 17415;
 param.molmapResolution = 3;
 param.WindowSize = [640 480];
