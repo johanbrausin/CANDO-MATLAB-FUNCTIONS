@@ -1,0 +1,2 @@
+AAA.pdb -- TTT.pdb are created at C:\Users\Keyao\Documents\Projects\2012_DNA_Origami\codes\Transform_reference
+Modified from C:\Users\Keyao\Documents\Projects\2012_DNA_Origami\Codes_FileFormats_Alignment\json2pdb_ver15_alignment
