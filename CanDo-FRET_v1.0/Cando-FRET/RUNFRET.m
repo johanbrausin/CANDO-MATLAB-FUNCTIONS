@@ -2,7 +2,7 @@ clear
 clc
 
 n = input('please enter the number of molecules in the system->');
-nt = input('enter the types of differetn dyes in the system->');
+nt = input('enter the types of different dyes in the system->');
 kind = [1:n];
 ss = 0 ;
 R0 = zeros(n,n);
@@ -15,8 +15,8 @@ R = zeros(n,3);
 for k=1:n
    R(k,:)= input('enter each dye coordinates as a vector [x,y,z] and check the matrix each value is multiplied by 10^-10 to have meters scale) ->')*10^-10 
 end
-pos_don = input('enter which kind of mol are DONORS depending the row of the previous matrix R like as an array [x1 x2 ...]->');
-pos_acc = input('enter which kind of mol are ACCEPTORS depending the row of the previous matrix R like as an array [x1 x2 ...]->');
+pos_don = input('enter which kind of mol are DONORS depending the row of the previous matrix R  as an array [x1 x2 ...]->');
+pos_acc = input('enter which kind of mol are ACCEPTORS depending the row of the previous matrix R as an array [x1 x2 ...]->');
 a = input('are you considering the transition dipole of each dye? (1/0)->');
 switch a
     case 1
@@ -28,13 +28,13 @@ switch a
             random(z)= input('enter which dyes are random (1,2,...)->')
         end 
     case 0
-        D = [0 0 10 ;0 1 0; 1 0 0; 0 0 0];
+        D = [0 0 1 ;0 1 0; 1 0 0; 0 0 1];
         random = [1:n];
 end 
 
 t_end = input('enter the time of simulation (this will be multiplied by 10^-9, to have seconds scale)->')*10^-9;
 
-tau = [3.1 3.4 3.2 0.7 ].*10^-9;
+%tau = [3.1 3.4 3.2 0.7 ].*10^-9;
 tau = zeros(1,nt);
 for s=1:nt
     
@@ -77,16 +77,16 @@ disp(avg_TE)
 
 %x1 = tau*abs(A);
 %X = x1.^(-1/6);
-f1 = K*tau';
-f2 = f1.^(-1/6);
-phitden = 1+(f2.^6);
-phit = phitden.^-1;
-figure
-scatter(f2,phit,'r')
-xlabel('$\frac{r}{R_0}$','Interpreter','latex','FontSize',15)
-ylabel('efficency transfer','Interpreter','latex','FontSize',15)
-title('Variations in the transfer efficency','Interpreter','latex','FontSize',15)
-grid
+%f1 = K*tau';
+%f2 = f1.^(-1/6);
+%phitden = 1+(f2.^6);
+%phit = phitden.^-1;
+%figure
+%scatter(f2,phit,'r')
+%xlabel('$\frac{r}{R_0}$','Interpreter','latex','FontSize',15)
+%ylabel('efficency transfer','Interpreter','latex','FontSize',15)
+%title('Variations in the transfer efficency','Interpreter','latex','FontSize',15)
+%grid
 figure
 imagesc(A);
 title('Transition Matrix','Interpreter','latex','FontSize',15)
