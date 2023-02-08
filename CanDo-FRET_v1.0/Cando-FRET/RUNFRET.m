@@ -110,7 +110,7 @@ for i = 1:n
    figure
    plot(T,rho(:,i))
    xlabel('$Time(sec)$','Interpreter','latex','FontSize',15)
-   ylabel('Exciton population Dye n','Interpreter','latex','FontSize',15)
+   ylabel('Exciton population Dye ' num2str(n)  ,'Interpreter','latex','FontSize',15)
    title('Variations in the transfer efficency','Interpreter','latex','FontSize',15)
    grid
 end
