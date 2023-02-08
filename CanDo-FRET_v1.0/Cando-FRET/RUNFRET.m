@@ -107,13 +107,15 @@ grid
 % ylabel('Exciton population Dye n','Interpreter','latex','FontSize',15)
 % title('Variations in the transfer efficency','Interpreter','latex','FontSize',15)
 % grid
+j = [1:n];
 for i = 1:n
    figure
    plot(T,rho(:,i))
    xlabel('$Time(sec)$','Interpreter','latex','FontSize',15)
-   ylabel(sprintf('Exciton population Dye #%d', n)  ,'Interpreter','latex','FontSize',15)
+   ylabel(sprintf('$Exciton population Dye %d$', i),'Interpreter','latex','FontSize',15)
    title('Variations in the transfer efficency','Interpreter','latex','FontSize',15)
    grid
+   hold on
 end
 
 % s = size(K);
