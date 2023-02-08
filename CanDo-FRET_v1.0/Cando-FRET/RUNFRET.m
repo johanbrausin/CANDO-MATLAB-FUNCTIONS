@@ -3,7 +3,7 @@ clc
 
 n = input('please enter the number of molecules in the system->');
 nt = input('enter the types of different dyes in the system->');
-kind = [1:n];
+kind = 1:n;
 ss = 0 ;
 R0 = zeros(n,n);
 for i=1:n
@@ -17,16 +17,19 @@ for k=1:n
 end
 pos_don = input('enter which kind of mol are DONORS depending the row of the previous matrix R  as an array [x1 x2 ...]->');
 pos_acc = input('enter which kind of mol are ACCEPTORS depending the row of the previous matrix R as an array [x1 x2 ...]->');
-a = input('are you considering the transition dipole of each dye fixed and random? (1/0)->');
+a = input('are you considering the transition dipole of each dye? (1/0)->');
 switch a
     case 1
         D = zeros(n,3);
         for z=1:n
             D(z,:)= input('if you are considering the transition dipole matrix input each unitary vector as [x y z] and check the matrix->')
-            nr = input('eneter the number of molecules with random dipole orientation ->');
-            random = zeros(1,nt);
-            random(z)= input('enter which dyes are random (1,2,...)->')
+
         end 
+            nr = input('eneter the number of molecules with random dipole orientation ->');
+            random = zeros(1,nr);
+            for z=1:nr
+                random(z)= input('enter which dyes are random (1,2,...)->')
+            end
     case 0
         D = [0 0 1 ;0 1 0; 1 0 0; 0 0 1];
         random = [1:n];
@@ -61,7 +64,7 @@ par = 0; %%its better having 0 meanwhile
 % pos_acc = [3 4];
 % R = [210.628 206.962 -1.370 ;148.366 144.530 -2.574; 103.563 98.914 6.607; 47.802 43.959 -2.427].*10^-10;
 % R0 = [0 62 51 45; 26 58 67 63; 19 10 0 79; 45 63 79 0].*10^-10;
-% D = [0 0 10 ;0 1 0; 1 0 0; 0 0 0];
+% D = [0 0 1 ;0 1 0; 1 0 0; 0 1 0];
 % tau = [3.1 3.4 3.2 0.7].*10^-9;
 % random = [1 2 3 4];
 % mol_ext = [90000 120000 150000 240000];
