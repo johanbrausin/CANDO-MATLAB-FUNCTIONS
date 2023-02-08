@@ -17,7 +17,7 @@ for k=1:n
 end
 pos_don = input('enter which kind of mol are DONORS depending the row of the previous matrix R  as an array [x1 x2 ...]->');
 pos_acc = input('enter which kind of mol are ACCEPTORS depending the row of the previous matrix R as an array [x1 x2 ...]->');
-a = input('are you considering the transition dipole of each dye? (1/0)->');
+a = input('are you considering the transition dipole of each dye fixed and random? (1/0)->');
 switch a
     case 1
         D = zeros(n,3);
