@@ -36,6 +36,7 @@ t_end = input('enter the time of simulation (this will be multiplied by 10^-9, t
 
 %tau = [3.1 3.4 3.2 0.7 ].*10^-9;
 tau = zeros(1,nt);
+
 for s=1:nt
     
     tau(s) = input ('fluorescence life time of the dyes multiplied by 10^-9 (depends what number you gave each type of dye )->')*10^-9
